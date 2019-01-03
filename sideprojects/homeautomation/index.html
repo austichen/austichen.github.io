@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <title>Austin Chen | Side Projects</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="lightbox.css">
+    <script type="text/javascript" src="lightbox-plus-jquery.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerContent">
+            <a href="/">
+                <img src="/mainbanner2.png" alt="Austin Chen" title="Home" />
+            </a>
+            <div class="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/photography">Photography</a></li>
+                    <li><a href="/beforeandafters">Before and Afters</a></li>
+                    <li><a href="/sideprojects"><div class="navIndicator">Side Projects</div></a></li>
+                    <li><a href="/aboutme">About Me / Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="headerBreak"></div>
+    </div>
+    <div class="homeautomationcontent">
+        <h1>Home Automation System</h1>
+        <div class="textContainer">
+            <p>
+                This is a project I completed in summer 2016 which used a Raspberry
+                Pi as a signal to control lights wirelessly. Additionally, I used
+                crontab to implement a feature which turned the lights on and off
+                automatically and specified times.
+            </p>
+            </br>
+            </br>
+            <img src="images/picloseup.jpg"/>
+            </br>
+            </br>
+            <p>
+            The basic materials for the projct consisted of a lamp, a wireless power
+            outlet, and the Raspberry Pi with a 433MHz signal sender/receiver module.
+            Software wise, Raspbian OS was installed on the Pi.
+            </br>
+            </br>
+            433MHz RF transmitter and receivers were connected to the Raspberry Pi
+            through GPIO pins, allowing the Pi to send and receive signals to and
+            from the wireless power outlet. To make this functionality useful, RFSniffer
+            was used to detect the signals used by the wireless power outlet. The
+            wireless power outlet was plugged into a wall outlet, and the lamp was
+            plugged into the wireless power outlet. Signals could then be output
+            by the Pi to turn the power outlet on and off, which fully implements
+            the wireless power outlet feature.
+            </br>
+            </br>
+            This project saw several applications around the house. It was used to
+            automatically turn on and off an LED house number display that was
+            outside the house at specific hours, saving electricity. Also, it was
+            used to automatically turn on and off Christmas lights at peak hours
+            when the holidy season came around.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

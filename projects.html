@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Chen</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="css/lightbox.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="top"></div>
+    <nav>
+      <div class="container">
+        <a href="/" class="float-left blue-text">home</a>
+        <div class="float-right">
+          <a class="active" href="projects.html">projects</a>
+          <a href="photography.html">photography</a>
+          <a href="beforeandafters.html">before & afters</a>
+          <a href="aboutme.html">about me</a>
+        </div>
+        <i id="nav-dropdown-button" class="fas fa-bars"></i>
+        <div class="clearfix"></div>
+        <div class="nav-border"></div>
+        <ul class="dropdown-items">
+          <li><a class="active" href="projects.html">projects</a></li>
+          <li><a href="photography.html">photography</a></li>
+          <li><a href="beforeandafters.html">before & afters</a></li>
+          <li><a href="aboutme.html">about me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="clearfix"></div>
+    <div class="container content projects-container">
+      <h1 class="primary-text blue-text">Projects</h1>
+
+      <div class="projects-overview" id="projects-overview">
+        <a class="project-anchor" location="watch-along"><img src="images/watch-along-logo.png"/></a>
+        <a class="project-anchor" location="my-tasks"><img src="images/mytasks-logo.png"/></a>
+        <a class="project-anchor" location="tweet-anywhere"><img src="images/tweet-anywhere-logo.png"/></a>
+      </div>
+
+      <div class="project-container" id="watch-along">
+        <a title="overview" class="fas fa-chevron-up project-anchor" location="top"></a>
+        <h1 class="secondary-text grey-text">Watch Along</h1>
+        <p class="blue-text">socket.io | node | youtube api</p>
+        <div class="project-content">
+          <img src="images/watch-along-macbook.png" style="padding-bottom: 20px;"/>
+          <p>
+            Watch along is a content consumption platform that allows multiple users 
+            to watch online videos synchronously with each other. Users can  
+            create a virtual room and send its link to their friends to join. The 
+            video playback is synchronized for all viewers in the room.
+            <br><br>
+            The video sycnhronization is done using socket.io. Video player events made by 
+            the connected clients are sent to the server. The server then emits the 
+            same events to every client connected to the room, syncing every client's 
+            player with the server.
+            <br/>
+          </p>
+          <a href="https://github.com/austichen/watch-along" target="_blank" class="btn">github</a>
+          <a href="http://watch-along.herokuapp.com/" target="_blank" class="btn">view</a>
+        </div>
+        <a title="tweet-anywhere" class="fas fa-chevron-down project-anchor" location="my-tasks"></a>
+      </div>
+
+      <div class="project-container" id="my-tasks">
+        <a title="overview" class="fas fa-chevron-up project-anchor" location="watch-along"></a>
+        <h1 class="secondary-text grey-text">myTasks</h1>
+        <p class="blue-text">node | express | REST APIs | mongo</p>
+        <div class="project-content">
+          <img src="images/my-tasks-macbook.png"/>
+          <p>myTasks is a mobile friendly to-do list app that allows users to create,
+            view, and manage tasks. Anyone can make an account and immediately
+            create a list of tasks they have to complete. It's also extremely easy to
+            search through tasks and edit them if necessary.
+            <br><br>
+            REST APIs for site are built with Express, and the user and task data
+            is stored in a Mongo database. Rendering is done server-side with EJS
+            using the Materialize CSS framework.
+            <br/>
+          </p>
+          <a href="https://github.com/austichen/my-tasks" target="_blank" class="btn">github</a>
+          <a href="http://my-tasks-project.herokuapp.com/" target="_blank" class="btn">view</a>
+        </div>
+        <a title="tweet-anywhere" class="fas fa-chevron-down project-anchor" location="tweet-anywhere"></a>
+      </div>
+
+      <div class="project-container" id="tweet-anywhere">
+        <a title="my-tasks" class="fas fa-chevron-up project-anchor" location="my-tasks"></a>
+        <h1 class="secondary-text grey-text">Tweet Anywhere</h1>
+        <p class="blue-text">react | google maps & twitter APIs | node | mongo</p>
+        <div class="project-content">
+          <img src="images/tweet-anywhere-mac.png"/>
+          <p>Tweet Anywhere is a web app that allows users to search for Tweets
+            from any location around the globe, view them on Twitter, and save
+            them to a public collection if they really like it.
+            <br><br>
+            The app is built with a ReactJS front end, with Mongo being the database
+            used for storing saved Tweets. Google
+            maps API and Twitter API are also used to find Tweets based on the
+            user's search query.
+            <br/>
+          </p>
+          <a href="https://github.com/austichen/twitter_app" target="_blank" class="btn">github</a>
+          <a href="http://tweet-anywhere.herokuapp.com/" target="_blank" class="btn">view</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</html>

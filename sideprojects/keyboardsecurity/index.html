@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <title>Austin Chen | Side Projects</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="lightbox.css">
+    <script type="text/javascript" src="lightbox-plus-jquery.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerContent">
+            <a href="/">
+                <img src="/mainbanner2.png" alt="Austin Chen" title="Home" />
+            </a>
+            <div class="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/photography">Photography</a></li>
+                    <li><a href="/beforeandafters">Before and Afters</a></li>
+                    <li><a href="/sideprojects"><div class="navIndicator">Side Projects</div></a></li>
+                    <li><a href="/aboutme">About Me / Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="headerBreak"></div>
+    </div>
+    <div class="projectContent">
+        <h1>Keyboard Security System</h1>
+        <div class="textContainer">
+            <p>
+                This is a project I worked on in a team of three from November to
+                December 2017. A keyboard was connected to an Onion Omega, which
+                was used to lock and unlock the keyboard's functionality. When in
+                the locked state, the Omega would block off the keyboard's input signals.
+                When unlocked, the keyboard could be used to type text onto an
+                OLED display connected to the Omega. In addition, log files
+                which contained timestamps of when the system was used as well
+                as statistics computed on usage patterns was output to the Omega's
+                internal storage on a weekly basis.
+            </p>
+            </br>
+            </br>
+            <img src="images/wholesystem2.jpg"/>
+            </br>
+            <h2>Locking System</h2>
+            </br>
+            <p>
+                The lock system for the Omega is based off the following statemachine:
+            </p>
+            </br>
+            <img src="images/statemachine.png"/>
+            </br>
+            <p>
+                During the unlocked state, the Omega constantly searches for input
+                from the keyboard. When a key is pressed, the Omega converts the
+                raw input signal to an ASCII character, which is then checked against
+                the password array. If a set of inputs is equal to the password
+                array, the system is unlocked. If an incorrect password is entered
+                more than three times, then the device locks for 60 seconds, during which
+                the user is unable to try unlocking the device.
+            </p>
+            </br>
+            <h2>OLED Display</h2>
+            </br>
+                <img src="images/devicelocked.jpg"/>
+            </br>
+            <p>
+                The OLED display was programmed in C++ using the Onion I2C and OLED
+                Expansion libraries. The libraries didn't support the use of the
+                OLED as a typing display, so text-editing features such as backspace,
+                line break, and capitalization had to be manually implemented through
+                the use of loops. Pressing the 'esc' key would exit the text-display
+                and lock the system.
+            </p>
+            </br>
+            <h2>Logging and Statistics</h2>
+            </br>
+            <p>
+            Log files consisting of user activiting logs and usage statistics were
+            output to the Omega's internal storage on a weekly basis. Statistics
+            such as words per hour and standard standard deviation were calculated
+            using various functions and arrays.
+            </p>
+            </br>
+            <img src="images/functionsdiagram.jpg" id="fullsize"/>
+            </br>
+            <p>
+                As shown by the above diagram, each time the Omega detects input
+                from the keyboard, functions to get the current time are called, and
+                the the statistics and logs are updated for the current input and
+                time.
+            </p>
+            </br>
+            <h2>Video Demo</h2>
+            </br>
+            <video width="480" height="720" controls>
+                <source src="images/demo.mp4" type="video/mp4"/>
+            </video>
+        </div>
+
+    </div>
+</body>
+</html>
