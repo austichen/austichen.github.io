@@ -2,6 +2,10 @@ html{
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color:#fff;
+}
+
 * {
   margin: 0;
 }
@@ -26,26 +30,6 @@ p {
   color: white;
   background-color: #4dd0e1;
   transition: 0.3s ease-out;
-}
-
-.home-content {
-  margin-top: 20vh;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  animation-name: homecontent;
-  opacity: 0;
-  animation-duration: 1.5s;
-  animation-delay: 1.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-.title-text {
-  font-weight: 300;
-  font-size: 80px;
-  color: #f4f4f4;
 }
 
 .primary-text {
@@ -75,23 +59,6 @@ p {
   z-index: 1;
 }
 
-#home-page {
-  background-image: url("/images/china.jpg");
-  background-size: cover;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  top:0;
-  left:0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(153, 153, 153, .8);
-}
-
 .title-description {
   list-style-type: none;
   padding: 0;
@@ -101,26 +68,8 @@ p {
   display: inline;
 }
 
-.social-links {
-  margin-top: 20px;
-  padding: 0;
-  list-style-type: none;
-}
-
-.social-links li{
-  display: inline;
-  font-size: 20px;
-  color: #f4f4f4;
-  padding: 0 5px 0 5px;
-  transition: color 0.3s;
-}
-
-.social-links li:hover {
-  color: #4dd0e1;
-}
-
 nav {
-  background-color: white;
+  background-color: #fff;
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -360,18 +309,6 @@ nav a:hover, nav .active {
 
 .toggle-bio-text:hover {
   color: #d6d6d6;
-}
-
-/* ANIMATIONS */
-@keyframes homecontent {
-  0% {
-    opacity: 0;
-    top: 50%;
-  }
-  100% {
-    opacity: 1;
-    top:0px;
-  }
 }
 
 @keyframes fade-in {
