@@ -5,12 +5,16 @@ textWrappers.forEach(textWrapper => textWrapper.innerHTML = textWrapper.textCont
 let a1 = anime.timeline({loop: false});
 
 a1.add({
+    targets: '.title-text .text-wrapper',
+    opacity: 1,
+    duration: 1,
+    delay: 700
+  }).add({
     targets: '.title-text .line',
     scaleY: [0,1],
     opacity: [0.5,1],
     easing: "easeOutExpo",
-    duration: 700,
-    delay: 700
+    duration: 700
   })
   .add({
     targets: '.title-text .line',
