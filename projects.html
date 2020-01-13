@@ -35,13 +35,39 @@
       <h1 class="primary-text blue-text">Projects</h1>
 
       <div class="projects-overview" id="projects-overview">
+        <a class="project-anchor" location="messenger-insights"><img width="252px" src="images/messenger-insights-logo.png"/></a>
         <a class="project-anchor" location="watch-along"><img src="images/watch-along-logo.png"/></a>
         <a class="project-anchor" location="my-tasks"><img src="images/mytasks-logo.png"/></a>
         <a class="project-anchor" location="tweet-anywhere"><img src="images/tweet-anywhere-logo.png"/></a>
       </div>
 
-      <div class="project-container" id="watch-along">
+      <div class="project-container" id="messenger-insights">
         <a title="overview" class="fas fa-chevron-up project-anchor" location="top"></a>
+        <h1 class="secondary-text grey-text">Messenger Insights</h1>
+        <p class="blue-text">python | pandas | matplotlib | node | gatsby</p>
+        <div class="project-content">
+          <img src="images/messenger-insights-macbookgold.png" style="padding-bottom: 20px;"/>
+          <p>
+            Messenger Insights is a Python CLI tool that lets users view interesting trends 
+            in their Facebook Messenger usage. If you've ever been curious about who you talk to 
+            the most, what times you're most active, what your most frequently used words are, 
+            this is the perfect tool to find that out. If  the CLI isn't quite for you, there 
+            is also a web app that will display the most important stats in nice-looking UI, 
+            kind of like Spotify's "Year in Review", except for Facebook Messenger.
+            <br><br>
+            Data processing and visualization for the Python tool is done using pandas and 
+            matplotlib. The web app is a static site generated using Gatsby and uses 
+            GraphQL to query the user's processed Messenger data.
+            <br/>
+          </p>
+          <a href="https://github.com/austichen/messenger-insights" target="_blank" class="btn">github</a>
+          <a href="https://messenger-insights-demo.netlify.com/" target="_blank" class="btn">view</a>
+        </div>
+        <a title="tweet-anywhere" class="fas fa-chevron-down project-anchor" location="watch-along"></a>
+      </div>
+
+      <div class="project-container" id="watch-along">
+        <a title="overview" class="fas fa-chevron-up project-anchor" location="messenger-insights"></a>
         <h1 class="secondary-text grey-text">Watch Along</h1>
         <p class="blue-text">socket.io | node | youtube api</p>
         <div class="project-content">
